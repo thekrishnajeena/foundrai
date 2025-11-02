@@ -5,7 +5,7 @@ export default function CTA() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
 
-  function submit(e) {
+  function submit(e: { preventDefault: () => void; }) {
     e.preventDefault();
     // mock submission — in real life send to API or Zapier/Formspree
     setSent(true);
